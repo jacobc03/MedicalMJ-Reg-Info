@@ -1,0 +1,13 @@
+.navbar-brand>img {
+   max-height: 200%;
+   height: 200%;
+   width: auto;
+   margin-top: -9px
+
+}
+.navbar{
+	background-color: green;
+}
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
