@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<!-- Included the Angular JS library JS and the Angular UI-Router library -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+     <!-- CSS links -->
+     <link rel="stylesheet" href="mjStateRegInfo/layout/assets/styles/layout.css">
+</head>
+<body ng-app="mjStateRegInfo">
+	<!-- The ui-view directive is provided by ui-router and is where the main view for the route will be injected -->
+    <ui-view></ui-view>
+
+    <!-- JS links -->
+    <script src="mjStateRegInfo/mjStateRegInfo.module.js"></script>
+
+    <script src="mjStateRegInfo/features/home/home.module.js"></script>
+    <script src="mjStateRegInfo/features/home/home.controller.js"></script>
+    <script src="mjStateRegInfo/features/home/home.route.js"></script>
+</body>
+</html>
