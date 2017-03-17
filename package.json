@@ -1,0 +1,27 @@
+{
+  "name": "medicalmj-reg-info",
+  "version": "1.0.0",
+  "description": "state medical marijuana info for patients",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobc03/MedicalMJ-Reg-Info.git"
+  },
+  "author": "Jacob Cardillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobc03/MedicalMJ-Reg-Info/issues"
+  },
+  "homepage": "https://github.com/jacobc03/MedicalMJ-Reg-Info#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": "6.9.2"
+  }
+}
