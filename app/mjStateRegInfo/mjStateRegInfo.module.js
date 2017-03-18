@@ -5,6 +5,8 @@ angular
 		'ui.router',
 		//Features
 		'mjStateRegInfo.home',
+		'mjStateRegInfo.strains',
+		'mjStateRegInfo.politicians'
 		
 	])
 	.config(appConfig);
