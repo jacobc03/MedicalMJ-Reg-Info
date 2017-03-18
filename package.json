@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/jacobc03/MedicalMJ-Reg-Info#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "method-override": "^2.3.7",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.9.0"
   },
   "engines": {
     "node": "6.9.2"

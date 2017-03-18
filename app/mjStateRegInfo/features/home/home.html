@@ -62,3 +62,26 @@
 	</div>
 </div>
 <div>Home State:{{homeState}}</div>
+<div ng-show="homeState">
+	<p  ng-repeat="info in HomeVM.stateRegInfo" ">		
+			<span>Home State: {{info.state}}</span>
+			<br>
+			<span>Website: {{info.website}}</span>
+			<br>
+			<span>Approved Conditions: {{info.conditions}}</span>
+			<br>
+			<span>Possession/Cultivation: {{info.possession}}</span>
+			<br>
+			<span>Phone Number: {{info.phone}}</span>
+			<br>
+			<span>Email: {{info.email}}</span>
+			<br>
+			<span>Information provided by the state on sources for medical marijuana: {{info.info}}</span>
+			<br>
+			<span>Patient Registry Fee: {{info.fee}}</span>
+			<br>
+			<span>Accepts other states' registry ID cards: {{info.cards}}</span>
+			<br>
+			<span>Registration: {{info.registration}}</span>		
+	</p>
+</div>

@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title></title>
 	<!-- Included the Angular JS library JS, the Angular UI-Router library, JQuery and Bootstrap JS library -->
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
-     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     <!-- CSS links -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-     <link rel="stylesheet" href="mjStateRegInfo/layout/assets/styles/layout.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap & app CSS links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="mjStateRegInfo/layout/assets/styles/layout.css">
 </head>
+
 <body ng-app="mjStateRegInfo">
 	<!-- The ui-view directive is provided by ui-router and is where the main view for the route will be injected -->
     <ui-view></ui-view>
-
+    
     <!-- JS links -->
     <script src="mjStateRegInfo/mjStateRegInfo.module.js"></script>
-
+    
     <script src="mjStateRegInfo/features/home/home.module.js"></script>
     <script src="mjStateRegInfo/features/home/home.controller.js"></script>
     <script src="mjStateRegInfo/features/home/home.route.js"></script>
 
     <script src="mjStateRegInfo/features/components/navbar/navbar.module.js"></script>
     <script src="mjStateRegInfo/features/components/navbar/navbar.directive.js"></script>
+
+    <script src="mjStateRegInfo/features/components/stateInfo/stateInfo.module.js"></script>
+    <script src="mjStateRegInfo/features/components/stateInfo/stateInfo.service.js"></script>
+   
 </body>
 </html>

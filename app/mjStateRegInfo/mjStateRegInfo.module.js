@@ -4,7 +4,8 @@ angular
 		//Global Dependencies,
 		'ui.router',
 		//Features
-		'mjStateRegInfo.home'
+		'mjStateRegInfo.home',
+		
 	])
 	.config(appConfig);
 
