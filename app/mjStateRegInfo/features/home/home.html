@@ -64,7 +64,7 @@
 <div>Home State:{{homeState}}</div>
 <div ng-show="homeState">
 	<p  ng-repeat="info in HomeVM.stateRegInfo" ">		
-			<span>Home State: {{info.state}}</span>
+			<img class="statePic" ng-src="{{info.state}}">
 			<br>
 			<span>Website: {{info.website}}</span>
 			<br>
