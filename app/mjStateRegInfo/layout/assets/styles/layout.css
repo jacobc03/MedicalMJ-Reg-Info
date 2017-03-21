@@ -1,3 +1,6 @@
+body{
+  background-color: #8FBC8F;
+}
 /* Style for Navbar brand image */
 .navbar-brand>img {
    max-height: 200%;
@@ -49,4 +52,17 @@
 /* Style for the intro info on the state page */
 .stateSummary{
   text-align: center;
+}
+.carousel-inner{
+  display: block;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 15px; 
+}
+.videoTestimonials{
+  text-align: center;
+}
+.well{
+  width: 95%;
+  margin: auto;
 }

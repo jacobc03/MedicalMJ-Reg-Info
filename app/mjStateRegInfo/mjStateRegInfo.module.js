@@ -6,7 +6,8 @@ angular
 		//Features
 		'mjStateRegInfo.home',
 		'mjStateRegInfo.strains',
-		'mjStateRegInfo.politicians'
+		'mjStateRegInfo.politicians',
+		'mjStateRegInfo.state'
 		
 	])
 	.config(appConfig);
