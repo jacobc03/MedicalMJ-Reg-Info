@@ -1,20 +1,52 @@
+/* Style for Navbar brand image */
 .navbar-brand>img {
    max-height: 200%;
    height: 200%;
    width: auto;
    margin-top: -9px
-
 }
+/* Style for Navbar */
 .navbar{
 	background-color: green;
 }
+/* Style for Navbar links*/
 .navbar-default .navbar-nav>li>a{
 	color: white;
 }
+/* Style each state picture */
 .statePic{
 	height: 150px;
     width: 250px;
     border: 5px;
     border-style: solid;
     border-color: green;
+    padding: 3px;
+    text-align: center;
+}
+/* Style for contact info div of each state */
+.contact{
+  text-align: center;
+}
+/* Style for registration info div of each state */
+.registration{
+  text-align: center;
+}
+/* Style for possession info div of each state */
+.possession{
+  text-align: center; 
+}
+/* Style for state provided info div of each state */
+.moreInfo{
+  text-align: center;  
+}
+/* Style for main pic on the state page */
+.legalStatePic{
+  display: block;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 15px;
+}
+/* Style for the intro info on the state page */
+.stateSummary{
+  text-align: center;
 }

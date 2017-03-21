@@ -1,8 +1,12 @@
 <navbar></navbar>
 
-
+<img class="legalStatePic" src="https://infographic.statista.com/normal/chartoftheday_6681_the_states_where_it_s_legal_to_smoke_marijuana_n.jpg">
+<div>
+	<p class="stateSummary">Below is a list of states where Medical Marijuana is legal. If you can't find your home state below, feel free to <a ui-sref="politicians">contact</a> your local politicians to let them know of your support for Medical Marijuana.</p>
+</div>
 <div class="form-group">
-	<label for="state" class="col-sm-2 control-label">State</label>
+	<label for="state" class="col-sm-2 control-label">View a State</label>
+
 	<div class="col-sm-10">
 		<select class="form-control" id="state" name="state" ng-model="homeState">
 			<option value="">N/A</option>
@@ -61,27 +65,56 @@
 		</select>
 	</div>
 </div>
+
 <div>Home State:{{homeState}}</div>
-<div ng-show="homeState">
-	<p  ng-repeat="info in HomeVM.stateRegInfo" ">		
-			<img class="statePic" ng-src="{{info.picture}}">
+
+<div class="container">
+	<div class="jumbotron" ng-show="homeState" ng-repeat="info in HomeVM.stateRegInfo">
+    
+		<div class="registration"><img class="statePic" ng-src="{{info.picture}}">
+			<h4>Registration Info</h4>
+
+			<span><strong>Approved Conditions:</strong>{{info.conditions}}</span>
 			<br>
-			<span>Website: {{info.website}}</span>
+
+			<span><strong>Registration:</strong> {{info.registration}}</span>
 			<br>
-			<span>Approved Conditions: {{info.conditions}}</span>
+
+			<span><strong>Patient Registry Fee:</strong> {{info.fee}}</span>
 			<br>
-			<span>Possession/Cultivation: {{info.possession}}</span>
+
+			<span><strong>Accepts other states' registry ID cards:</strong> {{info.cards}}</span>
+		</div>
+
+		<div class="possession">
+			<h4>Possession/Cultivation</h4>
+
+			<span>{{info.possession}}</span>
+		</div>
+
+		<div class="moreInfo">
+			<h4>Information Provided by the State on Sources for Medical Marijuana</h4>
+
+			<span>{{info.info}}</span>
+		</div>
+
+		<div class="contact">
+			<h4>Contact Info</h4>
+			
+			<span><strong>Website:</strong> <a href="{{info.website}}" target="_blank">State Website</a></span>
 			<br>
-			<span>Phone Number: {{info.phone}}</span>
+
+			<span><strong>Email:</strong><a href="mailto:{{info.email}}"> {{info.email}}</a></span>
 			<br>
-			<span>Email: {{info.email}}</span>
-			<br>
-			<span>Information provided by the state on sources for medical marijuana: {{info.info}}</span>
-			<br>
-			<span>Patient Registry Fee: {{info.fee}}</span>
-			<br>
-			<span>Accepts other states' registry ID cards: {{info.cards}}</span>
-			<br>
-			<span>Registration: {{info.registration}}</span>		
-	</p>
+
+			<span><strong>Phone Number:</strong> {{info.phone}}</span>
+		
+		</div>	 
+	</div>
 </div>
+
+		
+			
+			
+					
+
