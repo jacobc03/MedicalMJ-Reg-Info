@@ -10,8 +10,8 @@ function StateInfoService($http) {
         getStateInfo: function (stateInfo) {
             $http.get('/api')
                 .then(function (response) {
-                    response.data.forEach(function(item) {
-                        stateInfo.push(item);
+                    response.data.forEach(function(info) {
+                        stateInfo.push(info);
                         
                     });
                 });
