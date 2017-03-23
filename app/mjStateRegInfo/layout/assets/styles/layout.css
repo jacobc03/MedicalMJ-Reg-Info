@@ -62,7 +62,12 @@ body{
 .videoTestimonials{
   text-align: center;
 }
-.well{
-  width: 95%;
-  margin: auto;
+.homeTitle{
+  text-align: center;
+}
+/* Makes Picture carousel fill entire container */
+.pic,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+  background-position:center center;
 }

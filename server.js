@@ -26,6 +26,9 @@ app.set('port', (process.env.PORT || 3000));
 // use the /api directory when referencing api
 app.use('/api', api);
 
+
+
+
 //Strains API
 var strainsAPI = {
   url: 'https://www.cannabisreports.com/api/v1.0/strains/search/blue',
@@ -35,9 +38,19 @@ var strainsAPI = {
 };
 request(strainsAPI, function (error, response, body) {
   if (!error && response.statusCode == 200) {
-   // console.log(body);
+    var strainSearchResult = JSON.parse(body);
+    console.log(strainSearchResult);
+    console.log("Name "+strainSearchResult.data[0].name);
+    console.log("URL "+strainSearchResult.data[0].url);
+    console.log("image "+strainSearchResult.data[0].image);
+    console.log("Seed Company Name "+strainSearchResult.data[0].seedCompany.name);
+    console.log("Review Count "+strainSearchResult.data[0].reviews.count);
+    console.log("Review Link "+strainSearchResult.data[0].reviews.link);
+     
+
   }
 })
+
 //Politicians API. Had to make api call here due to Access-Control-Allow-Origin error caused by Angular
 var politiciansAPI = {
   url: 'https://api.propublica.org/congress/v1/115/house/members.json',
@@ -47,7 +60,7 @@ var politiciansAPI = {
 };
 request(politiciansAPI, function (error, response, body) {
   if (!error && response.statusCode == 200) {
-    console.log(body);
+  //  console.log(body);
   }
 })
 // Listen on port 3000

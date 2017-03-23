@@ -9,6 +9,7 @@ angular
 		'mjStateRegInfo.politicians',
 		'mjStateRegInfo.state'
 		
+		
 	])
 	.config(appConfig);
 

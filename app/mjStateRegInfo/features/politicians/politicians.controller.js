@@ -4,7 +4,37 @@ angular
 
 	function PoliticiansCtrl() {
 		var vm = this;
-
+		var doughnutChart = $("#doughnutChart")
+		var myDoughnutChart = new Chart(doughnutChart, {
+		    type: 'doughnut',
+		    data: {
+			    labels: [
+			        "Red",
+			        "Blue",
+			        "Yellow"
+			    ],
+			    datasets: [
+			        {
+			            data: [300, 50, 100],
+			            backgroundColor: [
+			                "green",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ],
+			            hoverBackgroundColor: [
+			                "#FF6384",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ]
+			        }
+			    ]
+			},
+		    options: {
+		        animation:{
+		            animateScale:true
+		        }
+		    }
+		})
 		// vm.politicianInfo= [];
 
 		// // vm.state = {
