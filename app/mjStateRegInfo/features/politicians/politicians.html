@@ -84,7 +84,7 @@
 	<div class="row">
 	<div class="col-sm-6" ng-repeat="data in PoliticiansVM.senInfo">
 		
-		<h3>Senator {{data.name}}</h3>
+		<h2>Senator {{data.name}}</h2>
 		<span><strong>Role: </strong>{{data.role}}</span>
 		<br>
 		<span><strong>Party: </strong>{{data.party}}</span>
@@ -92,7 +92,7 @@
 		<span><strong>Upcoming Election Bid: </strong>{{data.next_election}}</span>
 		
 		<br>
-		<h5>Social Media Accounts</h5>
+		<h4>Social Media Accounts</h4>
 		<div class="socialIcons"><a href="https://twitter.com/{{data.twitter_id}}" target="_blank"><img class="piclink" src="http://www.logospike.com/wp-content/uploads/2014/11/Twitter_logo-7.png"></a>
 		<a href="https://www.youtube.com/user/{{data.youtube_id}}" target="_blank"><img class="piclink" src="http://www.cgt-ratp.fr/wp-content/uploads/2015/03/youtube-icone-150x150.png"></a></div>
 		</div>
@@ -100,7 +100,18 @@
 	</div>
 
 	<div class="jumbotron" ng-show="PoliticiansVM.politicianInfo.state" ng-repeat="data in PoliticiansVM.repInfo">
-		{{data}}
+		<h2>Representative {{data.name}}</h2>
+		<span><strong>District: </strong>{{data.district}}</span>
+		<br>
+		<span><strong>Party: </strong>{{data.party}}</span>
+		<br>
+		<span><strong>Seniority: </strong>{{data.seniority}}</span>
+		<br>
+		<span><strong>Upcoming Election Bid: </strong>{{data.next_election}}</span>
+		<br>
+		<h4>Social Media Accounts</h4>
+		<div class="socialIcons"><a href="https://twitter.com/{{data.twitter_id}}" target="_blank"><img class="piclink" src="http://www.logospike.com/wp-content/uploads/2014/11/Twitter_logo-7.png"></a>
+		<a href="https://www.youtube.com/user/{{data.youtube_id}}" target="_blank"><img class="piclink" src="http://www.cgt-ratp.fr/wp-content/uploads/2015/03/youtube-icone-150x150.png"></a></div>
 	</div>
 </div>
 

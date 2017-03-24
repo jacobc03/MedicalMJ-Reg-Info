@@ -47,7 +47,7 @@ app.post("/searchStrains",function(req, res){
 app.post("/searchSenators",function(req, res){
   console.log(req.body.state);
   var senatorAPI = {
-  url: "https://api.propublica.org/congress/v1/members/senate/"+req.body.state+"/current.json",
+  url: "https://api.propublica.org/congress/v1/members/senate/"+req.body.state+"/10/current.json",
   headers: {
     'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
   }
@@ -66,7 +66,7 @@ app.post("/searchSenators",function(req, res){
 app.post("/searchRep",function(req, res){
 //  console.log(req.body.state);
   var repAPI = {
-  url: "https://api.propublica.org/congress/v1/members/house/CA/current.json",
+  url: "https://api.propublica.org/congress/v1/members/house/"+req.body.state+"/current.json",
   headers: {
     'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
   }
