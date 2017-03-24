@@ -37,14 +37,7 @@ app.post("/searchStrains",function(req, res){
   request(strainsAPI, function (error, response, body) {
   if (!error && response.statusCode == 200) {
     var strainSearchResult = JSON.parse(body);
-    // console.log(strainSearchResult);
-    // console.log("Name "+strainSearchResult.data[0].name);
-    // console.log("URL "+strainSearchResult.data[0].url);
-    // console.log("image "+strainSearchResult.data[0].image);
-    // console.log("Seed Company Name "+strainSearchResult.data[0].seedCompany.name);
-    // console.log("Review Count "+strainSearchResult.data[0].reviews.count);
-    // console.log("Review Link "+strainSearchResult.data[0].reviews.link);
-    console.log(strainSearchResult);
+   // console.log(strainSearchResult);
     res.json(strainSearchResult);
 
     }
@@ -52,9 +45,9 @@ app.post("/searchStrains",function(req, res){
 })
 //Politicians API
 app.post("/searchPoliticians",function(req, res){
- // console.log(req.body.strain);
+  console.log(req.body.state);
   var politiciansAPI = {
-  url: 'https://api.propublica.org/congress/v1/115/house/members.json',
+  url: "https://api.propublica.org/congress/v1/members/senate/"+req.body.state+"/current.json",
   headers: {
     'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
   }
@@ -63,7 +56,7 @@ app.post("/searchPoliticians",function(req, res){
   if (!error && response.statusCode == 200) {
      var politicianSearchResult = JSON.parse(body);
     
-    console.log(politicianSearchResult);
+   // console.log(politicianSearchResult);
     res.json(politicianSearchResult);
 
     }

@@ -21,7 +21,7 @@
 	<label for="state" class="col-sm-2 control-label">View a State</label>
 
 
-		<select class="form-control" id="state" name="state" ng-model="PoliticiansVM.state.state" ng-change='PoliticiansVM.searchPoliticians()'>
+		<select class="form-control" id="state" name="state" ng-model="PoliticiansVM.politicianInfo.state" ng-change='PoliticiansVM.searchPoliticians()'>
 			<option value="">N/A</option>
 			<option value="AK">Alaska</option>
 			<option value="AL">Alabama</option>
@@ -80,7 +80,19 @@
 </div>
 
 <div class="container">
-  <div class="jumbotron" ng-show="PoliticiansVM.state.state" ng-repeat="data in PoliticiansVM.polInfo">
-  {{data.members}}
+  <div class="jumbotron" ng-show="PoliticiansVM.politicianInfo.state" ng-repeat="data in PoliticiansVM.polInfo">
+  {{data.name}}
+  <br>
+  {{data.role}}
+  <br>
+  {{data.party}}
+  <br>
+	{{data.times_topics_url}}
+  <br>
+  {{data.twitter_id}}
+  <br>
+  {{data.youtube_id}}
+  <br>
+  {{data.next_election}}
      
 </div>

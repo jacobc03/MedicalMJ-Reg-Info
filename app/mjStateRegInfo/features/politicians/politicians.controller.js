@@ -5,20 +5,19 @@ angular
 	function PoliticiansCtrl($http) {
 		var vm = this;
 
-
+		//holds what state the user picks
 		vm.politicianInfo= {
-			info:''
+			state:''
 		};
 
 		
 
 		vm.searchPoliticians= function(){
 		
-		$http.post('/searchPoliticians', { strain: vm.politicianInfo.info })
+		$http.post('/searchPoliticians', { state: vm.politicianInfo.state })
 		.then(function(data){
 			console.log(data)
 			vm.polInfo = data.data.results
-			console.log(data.data.results.members.domain)
 		})
 }
 		
