@@ -21,7 +21,7 @@
 	<label for="state" class="col-sm-2 control-label">View a State</label>
 
 
-		<select class="form-control" id="state" name="state" ng-model="PoliticiansVM.politicianInfo.state" ng-change='PoliticiansVM.searchPoliticians()'>
+		<select class="form-control" id="state" name="state" ng-model="PoliticiansVM.politicianInfo.state" ng-change='PoliticiansVM.searchSenators();PoliticiansVM.searchRep()'>
 			<option value="">N/A</option>
 			<option value="AK">Alaska</option>
 			<option value="AL">Alabama</option>
@@ -80,19 +80,27 @@
 </div>
 
 <div class="container">
-  <div class="jumbotron" ng-show="PoliticiansVM.politicianInfo.state" ng-repeat="data in PoliticiansVM.polInfo">
-  {{data.name}}
-  <br>
-  {{data.role}}
-  <br>
-  {{data.party}}
-  <br>
-	{{data.times_topics_url}}
-  <br>
-  {{data.twitter_id}}
-  <br>
-  {{data.youtube_id}}
-  <br>
-  {{data.next_election}}
-     
+	<div class="jumbotron" ng-show="PoliticiansVM.politicianInfo.state" >
+	<div class="row">
+	<div class="col-sm-6" ng-repeat="data in PoliticiansVM.senInfo">
+		
+		<h3>Senator {{data.name}}</h3>
+		<span><strong>Role: </strong>{{data.role}}</span>
+		<br>
+		<span><strong>Party: </strong>{{data.party}}</span>
+		<br>
+		<span><strong>Upcoming Election Bid: </strong>{{data.next_election}}</span>
+		
+		<br>
+		<h5>Social Media Accounts</h5>
+		<div class="socialIcons"><a href="https://twitter.com/{{data.twitter_id}}" target="_blank"><img class="piclink" src="http://www.logospike.com/wp-content/uploads/2014/11/Twitter_logo-7.png"></a>
+		<a href="https://www.youtube.com/user/{{data.youtube_id}}" target="_blank"><img class="piclink" src="http://www.cgt-ratp.fr/wp-content/uploads/2015/03/youtube-icone-150x150.png"></a></div>
+		</div>
+	</div>
+	</div>
+
+	<div class="jumbotron" ng-show="PoliticiansVM.politicianInfo.state" ng-repeat="data in PoliticiansVM.repInfo">
+		{{data}}
+	</div>
 </div>
+

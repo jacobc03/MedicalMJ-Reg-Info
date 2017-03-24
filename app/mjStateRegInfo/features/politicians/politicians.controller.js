@@ -12,12 +12,21 @@ angular
 
 		
 
-		vm.searchPoliticians= function(){
+		vm.searchSenators= function(){
 		
-		$http.post('/searchPoliticians', { state: vm.politicianInfo.state })
+		$http.post('/searchSenators', { state: vm.politicianInfo.state })
 		.then(function(data){
 			console.log(data)
-			vm.polInfo = data.data.results
+			vm.senInfo = data.data.results
+		})
+}
+
+vm.searchRep= function(){
+		
+		$http.post('/searchRep', { state: vm.politicianInfo.state })
+		.then(function(data){
+			console.log(data)
+			vm.repInfo = data.data.results
 		})
 }
 		

@@ -43,16 +43,35 @@ app.post("/searchStrains",function(req, res){
     }
   })
 })
-//Politicians API
-app.post("/searchPoliticians",function(req, res){
+//Senator API
+app.post("/searchSenators",function(req, res){
   console.log(req.body.state);
-  var politiciansAPI = {
+  var senatorAPI = {
   url: "https://api.propublica.org/congress/v1/members/senate/"+req.body.state+"/current.json",
   headers: {
     'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
   }
 };
-  request(politiciansAPI, function (error, response, body) {
+  request(senatorAPI, function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+     var politicianSearchResult = JSON.parse(body);
+    
+   // console.log(politicianSearchResult);
+    res.json(politicianSearchResult);
+
+    }
+  })
+})
+//Rep API
+app.post("/searchRep",function(req, res){
+//  console.log(req.body.state);
+  var repAPI = {
+  url: "https://api.propublica.org/congress/v1/members/house/CA/current.json",
+  headers: {
+    'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
+  }
+};
+  request(repAPI, function (error, response, body) {
   if (!error && response.statusCode == 200) {
      var politicianSearchResult = JSON.parse(body);
     
