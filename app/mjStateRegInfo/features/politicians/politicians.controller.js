@@ -2,29 +2,50 @@ angular
 	.module('mjStateRegInfo.politicians')
 	.controller('PoliticiansCtrl', PoliticiansCtrl)
 
-	function PoliticiansCtrl() {
+	function PoliticiansCtrl($http) {
 		var vm = this;
-		var doughnutChart = $("#doughnutChart")
+
+
+		vm.politicianInfo= {
+			info:''
+		};
+
+		
+
+		vm.searchPoliticians= function(){
+		
+		$http.post('/searchPoliticians', { strain: vm.politicianInfo.info })
+		.then(function(data){
+			console.log(data)
+
+		})
+}
+		
+		// politiciansAPI.getPoliticians(vm.politicianInfo);
+		// console.log(vm.politicianInfo);
+		var doughnutChart = $("#doughnutChart");
+		var doughnutChart2 = $("#doughnutChart2");
+		var doughnutChart3 = $("#doughnutChart3");
 		var myDoughnutChart = new Chart(doughnutChart, {
 		    type: 'doughnut',
 		    data: {
 			    labels: [
-			        "Red",
-			        "Blue",
-			        "Yellow"
+			        "For",
+			        "Against",
+			        "Undecided"
 			    ],
 			    datasets: [
 			        {
 			            data: [300, 50, 100],
 			            backgroundColor: [
-			                "green",
-			                "#36A2EB",
-			                "#FFCE56"
+			                "#008000",
+			                "#DFD911",
+			                "#0EC459"
 			            ],
 			            hoverBackgroundColor: [
-			                "#FF6384",
-			                "#36A2EB",
-			                "#FFCE56"
+			                "#05CF08",
+			                "#F8F10F",
+			                "#12E76A"
 			            ]
 			        }
 			    ]
@@ -35,21 +56,61 @@ angular
 		        }
 		    }
 		})
-		// vm.politicianInfo= [];
-
-		// // vm.state = {
-
-		// // };
-
-		// // function selectState(stateName) {
-		// // 	stateinfo.queryfunction()
-
-		// // 	vm.state.name = data.state;
-			
-		// // }
-
-		// //use the stateInfo service to get all state info from the db
-		// politiciansAPI.getPoliticians(vm.politicianInfo);
-		// console.log(vm.politicianInfo);
+		var myDoughnutChart2 = new Chart(doughnutChart2, {
+		    type: 'doughnut',
+		    data: {
+			    labels: [
+			       "For",
+			        "Against",
+			        "Undecided"
+			    ],
+			    datasets: [
+			        {
+			            data: [300, 50, 100],
+			            backgroundColor: [
+			                "#008000",
+			                "#DFD911",
+			                "#0EC459"
+			            ],
+			            hoverBackgroundColor: [
+			                 "#05CF08",
+			                "#F8F10F",
+			                "#12E76A"
+			            ]
+			        }
+			    ]
+			}
+		})
+		var myDoughnutChart3 = new Chart(doughnutChart3, {
+		    type: 'doughnut',
+		    data: {
+			    labels: [
+			        "For",
+			        "Against",
+			        "Undecided"
+			    ],
+			    datasets: [
+			        {
+			            data: [300, 50, 100],
+			            backgroundColor: [
+			                "#008000",
+			                "#DFD911",
+			                "#0EC459"
+			            ],
+			            hoverBackgroundColor: [
+			                 "#05CF08",
+			                "#F8F10F",
+			                "#12E76A"
+			            ]
+			        }
+			    ]
+			},
+		    options: {
+		        animation:{
+		            animateScale:true
+		        }
+		    }
+		})
+		
 	
 	}

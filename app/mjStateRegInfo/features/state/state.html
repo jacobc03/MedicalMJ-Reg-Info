@@ -9,7 +9,7 @@
 	<label for="state" class="col-sm-2 control-label">View a State</label>
 
 	<div class="col-sm-10">
-		<select class="form-control" id="state" name="state" ng-model="homeState">
+		<select class="form-control" id="state" name="state" ng-model="StateVM.state.state" ng-change='StateVM.selectState()'>
 			<option value="">N/A</option>
 			<option value="AK">Alaska</option>
 			<option value="AL">Alabama</option>
@@ -70,7 +70,7 @@
 <div>Home State:{{homeState}}</div>
 
 <div class="container">
-	<div class="jumbotron" ng-show="homeState" ng-repeat="info in StateVM.stateRegInfo">
+	<div class="jumbotron" ng-show="StateVM.state.state" ng-repeat="info in StateVM.stateRegInfo">
     
 		<div class="registration"><img class="statePic" ng-src="{{info.picture}}">
 			<h4>Registration Info</h4>

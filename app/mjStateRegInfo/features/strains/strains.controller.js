@@ -2,42 +2,39 @@ angular
 	.module('mjStateRegInfo.strains')
 	.controller('StrainsCtrl', StrainsCtrl)
 
-	function StrainsCtrl() {
+
+	function StrainsCtrl($http) {
 		var vm = this;
-		//mkae http request to get api from node
+		
+		vm.strainResult = {
+			strain:''
+		}
+		
 
-		// //set a variable to store the date from db
-		// vm.strainInfo= {
-		// 	//name :data.data.name
-		// 	//url
-		// 	//image
-		// 	//seedCompany
-		// 	//seedCompany.name
-		// 	//seedCompany.link
-		// 	//genetics.names
-		// 	//genetics.link
-		// 	//lineage
-		// 	//children
-		// 	//children.count
-		// 	//children.link
-		// 	//reviews
-		// 	//reviews.count
-		// 	//reviews.link
+		vm.searchStrain = function(){
+		
+		$http.post('/searchStrains', { strain: vm.strainResult.strain })
+		.then(function(data){
+			console.log(data)
+			vm.strains = data.data.data
+	
+    console.log("Name "+data.data.data[0].name);
+    // console.log("URL "+data.data[0].url);
+    // console.log("image "+data.data[0].image);
+    // console.log("Seed Company Name "+data.data[0].seedCompany.name);
+    // console.log("Review Count "+data.data[0].reviews.count);
+    // console.log("Review Link "+data.data[0].reviews.link);
 
-		// };
+		})
 
-		// // vm.state = {
 
-		// // };
-
-		// // function selectState(stateName) {
-		// // 	stateinfo.queryfunction()
-
-		// // 	vm.state.name = data.state;
+			//console.log(vm.strainResult.strain);
 			
-		// // }
+			// $http.get('', something)
+			// .then(function(res){
+			// 	console.log('Successful: '+ res
+			// })
 
-		// //use the stateInfo service to get all state info from the db
-		// strainsAPI.getStrains(vm.strainInfo);
-		// console.log(vm.strainInfo);
+		}
+
 	}

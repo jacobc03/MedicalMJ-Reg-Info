@@ -1,2 +1,17 @@
 <navbar></navbar>
 
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control"  id='strainSearchInput"' placeholder="Search for strains" ng-model='StrainsVM.strainResult.strain'>
+      <span class="input-group-btn">
+        <button class="btn btn-default" ng-click='StrainsVM.searchStrain()' type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<div class="strainSearchResults"  ng-repeat="data in StrainsVM.strains">
+	{{data.name}}
+
+</div>
