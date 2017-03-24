@@ -37,16 +37,16 @@ angular
 			    ],
 			    datasets: [
 			        {
-			            data: [300, 50, 100],
+			            data: [73, 21, 6],
 			            backgroundColor: [
 			                "#008000",
-			                "#DFD911",
-			                "#0EC459"
+			                "#170982",
+			                "#6c0996"
 			            ],
 			            hoverBackgroundColor: [
 			                "#05CF08",
-			                "#F8F10F",
-			                "#12E76A"
+			                "#250de0",
+			                "#a30de2"
 			            ]
 			        }
 			    ]
@@ -67,16 +67,16 @@ angular
 			    ],
 			    datasets: [
 			        {
-			            data: [300, 50, 100],
+			            data: [81, 18, 1],
 			            backgroundColor: [
-			                "#008000",
-			                "#DFD911",
-			                "#0EC459"
+			               "#008000",
+			                "#170982",
+			                "#6c0996"
 			            ],
 			            hoverBackgroundColor: [
-			                 "#05CF08",
-			                "#F8F10F",
-			                "#12E76A"
+			                "#05CF08",
+			                "#250de0",
+			                "#a30de2"
 			            ]
 			        }
 			    ]
@@ -92,16 +92,16 @@ angular
 			    ],
 			    datasets: [
 			        {
-			            data: [300, 50, 100],
+			            data: [93, 6, 1],
 			            backgroundColor: [
-			                "#008000",
-			                "#DFD911",
-			                "#0EC459"
+			               "#008000",
+			                "#170982",
+			                "#6c0996"
 			            ],
 			            hoverBackgroundColor: [
-			                 "#05CF08",
-			                "#F8F10F",
-			                "#12E76A"
+			                "#05CF08",
+			                "#250de0",
+			                "#a30de2"
 			            ]
 			        }
 			    ]
