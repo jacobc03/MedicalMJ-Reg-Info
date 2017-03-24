@@ -10,9 +10,6 @@ var api = require('./app/api/routes/routes');
 //Initialize Express
 var app = express();
 
-// Make public a static dir
-app.use(express.static("public"));
-app.use(express.static(__dirname + "/app"));
 
 //Use body parser with app
 app.use(bodyParser.json());
@@ -23,6 +20,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 //set port
 app.set('port', (process.env.PORT || 3000));
 
+// Make public a static dir
+app.use(express.static("public"));
+app.use(express.static(__dirname + "/app"));
 // use the /api directory when referencing api
 app.use('/api', api);
 
