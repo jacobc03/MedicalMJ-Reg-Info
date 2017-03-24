@@ -17,7 +17,8 @@ angular
 		$http.post('/searchPoliticians', { strain: vm.politicianInfo.info })
 		.then(function(data){
 			console.log(data)
-
+			vm.polInfo = data.data.results
+			console.log(data.data.results.members.domain)
 		})
 }
 		
