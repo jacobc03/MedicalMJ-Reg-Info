@@ -90,3 +90,6 @@ body{
 .stateContainer{
   margin-top: 20px;
 }
+.jumbotron p.homePageQuotes{
+  font-size: 16px;
+}
