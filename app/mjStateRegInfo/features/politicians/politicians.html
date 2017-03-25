@@ -1,24 +1,31 @@
 <navbar></navbar>
 <div class="container">
-<div class="row"></div>
-	<h2>National Polls</h2>
-	<h4>Do you support or oppose allowing adults to legally use marijuana for medical purposes if their doctor prescribes it?</h4>
-	<div class="col-md-3 facts">
-	      <h5>March 2001 Pew Research Center</h5>
-	    <canvas id="doughnutChart" width="400" height="400"></canvas>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+	<div class="polls">
+		<h1>National Polls</h1>
+		<h4>Do you support or oppose allowing adults to legally use marijuana for medical purposes if their doctor prescribes it?</h4>
+		</div>
+		<div class="row">
+		<div class="col-md-4 facts">
+		      <h5>March 2001 Pew Research Center</h5>
+		    <canvas id="doughnutChart" width="400" height="400"></canvas>
+		</div>
+		<div class="col-md-4 facts">
+		      <h5>Jan 15, 2010 ABC News/Washington Post</h5>
+		    <canvas id="doughnutChart2" width="400" height="400"></canvas>
+		</div>
+		<div class="col-md-4 facts">
+		      <h5>Feb 23,2017 Quinnipiac University National Poll</h5>
+		    <canvas id="doughnutChart3" width="400" height="400"></canvas>
+		</div>
+		</div>
 	</div>
-	<div class="col-md-3 facts">
-	      <h5>Jan 15, 2010 ABC News/Washington Post</h5>
-	    <canvas id="doughnutChart2" width="400" height="400"></canvas>
-	</div>
-	<div class="col-md-3 facts">
-	      <h5>Feb 23,2017 Quinnipiac University National Poll</h5>
-	    <canvas id="doughnutChart3" width="400" height="400"></canvas>
 	</div>
 </div>
 <div class="container">
 <div class="row">
-<div class="form-group col-md-3">
+<div class="form-group col-md-4 col-md-offset-4">
 	<label for="state" class="control-label">Find your state politicians</label>
 
 		<select class="form-control" id="state" name="state" ng-model="PoliticiansVM.politicianInfo.state" ng-change='PoliticiansVM.searchSenators();PoliticiansVM.searchRep()'>
