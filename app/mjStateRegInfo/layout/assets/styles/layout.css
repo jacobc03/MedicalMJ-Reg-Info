@@ -14,7 +14,19 @@ body{
 }
 /* Style for Navbar links*/
 .navbar-default .navbar-nav>li>a{
-	color: white;
+	 color: white;
+}
+.navbar-default .navbar-text{
+    color: white;
+    font-size: 30px;
+}
+.navbar-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
 }
 /* Style each state picture */
 .statePic{
