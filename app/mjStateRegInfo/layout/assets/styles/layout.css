@@ -1,6 +1,9 @@
 body{
   background-color: #8FBC8F;
 }
+.container{
+  padding: 0;
+}
 /*-----------------------------------*/
 /*-----------Navbar Styles-----------*/
 /*-----------------------------------*/
@@ -14,6 +17,7 @@ body{
 /* Navbar color*/
 .navbar{
 	background-color: green;
+  margin: 0;
 }
 /* Style for Navbar links*/
 .navbar-default .navbar-nav>li>a{
@@ -58,10 +62,19 @@ body{
   background-position:center center;
 }
 .homePic{
- height: 400px !important;
+ height: 420px !important;
 }
-.jumbotron p.homePageQuotes{
-  font-size: 16px;
+/* Center quotes in the middle of the carousel vertically and horizontally */
+.carousel-caption.homePageQuotes{
+    margin: 0; 
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.homeFacts{
+  text-align: center;
 }
 /*------------------------------------------*/
 /*-----------End Home Page Styles-----------*/
