@@ -1,6 +1,9 @@
 body{
   background-color: #8FBC8F;
 }
+/*-----------------------------------*/
+/*-----------Navbar Styles-----------*/
+/*-----------------------------------*/
 /* Style for Navbar brand image */
 .navbar-brand>img {
    max-height: 200%;
@@ -8,7 +11,7 @@ body{
    width: auto;
    margin-top: -9px
 }
-/* Style for Navbar */
+/* Navbar color*/
 .navbar{
 	background-color: green;
 }
@@ -28,9 +31,49 @@ body{
     margin: auto;
     padding-top: 10px;
 }
+/*---------------------------------------*/
+/*-----------End Navbar Styles-----------*/
+/*---------------------------------------*/
+
+
+/*--------------------------------------*/
+/*-----------Home Page Styles-----------*/
+/*--------------------------------------*/
+.carousel-inner{
+  display: block;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 15px; 
+}
+.videoTestimonials{
+  text-align: center;
+}
+.homeTitle{
+  text-align: center;
+}
+/* Makes Picture carousel fill entire container */
+.pic,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+  background-position:center center;
+}
+.homePic{
+ height: 400px !important;
+}
+.jumbotron p.homePageQuotes{
+  font-size: 16px;
+}
+/*------------------------------------------*/
+/*-----------End Home Page Styles-----------*/
+/*------------------------------------------*/
+
+
+/*---------------------------------------*/
+/*-----------State Page Styles-----------*/
+/*---------------------------------------*/
 /* Style each state picture */
 .statePic{
-	height: 150px;
+  height: 150px;
     width: 250px;
     border: 5px;
     border-style: solid;
@@ -65,25 +108,14 @@ body{
 .stateSummary{
   text-align: center;
 }
-.carousel-inner{
-  display: block;
-    margin: auto;
-    width: 40%;
-    margin-bottom: 15px; 
-}
-.videoTestimonials{
-  text-align: center;
-}
-.homeTitle{
-  text-align: center;
-}
-/* Makes Picture carousel fill entire container */
-.pic,.carousel,.item,.container,.fill {
-  height:100%;
-  width:100%;
-  background-position:center center;
-}
+/*-------------------------------------------*/
+/*-----------End State Page Styles-----------*/
+/*-------------------------------------------*/
 
+
+/*-----------------------------------------*/
+/*-----------Strains Page Styles-----------*/
+/*-----------------------------------------*/
 .strainPic{
   height: 230px;
     width: 300px;
@@ -95,17 +127,6 @@ body{
 .strainSearchBar{
   margin-bottom: 10px;
 }
-.piclink{
-  width: 50px;
-  height: 50px;
-}
-.stateContainer{
-  margin-top: 20px;
-}
-.jumbotron p.homePageQuotes{
-  font-size: 16px;
-}
-
 .strainListPic {
   max-width: 100%;
   margin-top: 50px;
@@ -119,5 +140,32 @@ body{
   -webkit-transform: scale(2.3);
   transform: scale(2.3);
 }
-.polls{text-align: center;}
 .photoCaption{text-align: center;}
+/*---------------------------------------------*/
+/*-----------End Strains Page Styles-----------*/
+/*---------------------------------------------*/
+
+
+/*---------------------------------------------*/
+/*-----------Politicians Page Styles-----------*/
+/*---------------------------------------------*/
+.socialPic{
+  width: 50px;
+  height: 50px;
+}
+.pollCharts{text-align: center;}
+/*-------------------------------------------------*/
+/*-----------End Politicians Page Styles-----------*/
+/*-------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
