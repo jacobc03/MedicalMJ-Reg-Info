@@ -7,9 +7,7 @@ angular
 		'mjStateRegInfo.home',
 		'mjStateRegInfo.strains',
 		'mjStateRegInfo.politicians',
-		'mjStateRegInfo.state'
-		
-		
+		'mjStateRegInfo.state'	
 	])
 	.config(appConfig);
 

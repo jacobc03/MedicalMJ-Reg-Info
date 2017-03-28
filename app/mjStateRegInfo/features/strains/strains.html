@@ -1,47 +1,71 @@
 <navbar></navbar>
 
-<div class="container">
+<!--/////////-->
+<!--Section 1-->
+<!--/////////-->
 
+<div class="container">
 	<div class="row">
 		<img class="strainListPic col-lg-6 col-lg-offset-3" src="https://farm2.static.flickr.com/1483/26270258740_2b30678f5a_b.jpg">
 	</div>
 	<p class="photoCaption">Hover over photo to zoom</p>
 </div>
 
+<!--/////////////-->
+<!--Section 1 End-->
+<!--/////////////-->
+
+<!--/////////-->
+<!--Section 2-->
+<!--/////////-->
+
 <div class="container">
-<div class="row">
-  <div class="col-lg-6 col-lg-offset-3">
-    <div class="input-group strainSearchBar">
-      <input type="text" class="form-control"  id='strainSearchInput"' placeholder="Search for strains" ng-model='StrainsVM.strainResult.strain'>
-      <span class="input-group-btn">
-        <button class="btn btn-default" ng-click='StrainsVM.searchStrain()' type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-
-
-
-<div class="jumbotron" ng-show="StrainsVM.strainResult.strain" ng-repeat="data in StrainsVM.strains">
 	<div class="row">
-		<div class=" col-lg-8 strainSearchResults">
-		<h1>{{data.name}}</h1>
-		<br>
-		<h4>Cannabis Reports <a href="{{data.url}}" target="_blank">Link</a></h4>
-		<h4>Seed Company</h4>
-		{{data.seedCompany.name}}
-		<br>
-		<h4>Review Info</h4>
-		<span><strong>Count: </strong>{{data.reviews.count}}</span>
-		<br>
-		<span><strong>Link: </strong><a href="{{data.reviews.link}}" target="_blank">Click Here</a></span>
-		</div>
+		<div class="col-lg-6 col-lg-offset-3">
+		    <div class="input-group strainSearchBar">
+		      <input type="text" class="form-control"  id='strainSearchInput"' placeholder="Search for strains" ng-model='StrainsVM.strainResult.strain'>
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" ng-click='StrainsVM.searchStrain()' type="button">Go!</button>
+		      </span>
+		    </div><!-- /input-group -->
+		</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+</div>
 
-		<div class="col-lg-4">
-		<img  class= "strainPic" ng-src='{{data.image}}'>
+<!--/////////////-->
+<!--Section 2 End-->
+<!--/////////////-->
+
+<!--/////////-->
+<!--Section 3-->
+<!--/////////-->
+
+<div class="container">
+	<div class="jumbotron" ng-show="StrainsVM.strainResult.strain" ng-repeat="data in StrainsVM.strains">
+		<div class="row">
+			<div class=" col-lg-8 strainSearchResults">
+				<h1>{{data.name}}</h1>
+				<br>
+				<h4>Cannabis Reports <a href="{{data.url}}" target="_blank">Link</a></h4>
+				<h4>Seed Company</h4>
+				{{data.seedCompany.name}}
+				<br>
+				<h4>Review Info</h4>
+				<span><strong>Count: </strong>{{data.reviews.count}}</span>
+				<br>
+				<span><strong>Link: </strong><a href="{{data.reviews.link}}" target="_blank">Click Here</a></span>
+			</div>
+
+			<div class="col-lg-4">
+				<img  class= "strainPic" ng-src='{{data.image}}'>
+			</div>
+			
 		</div>
-		
 	</div>
 </div>
+
+<!--/////////////-->
+<!--Section 3 End-->
+<!--/////////////-->
 
 
