@@ -121,6 +121,10 @@ body{
 .stateSummary{
   text-align: center;
 }
+#marijuanaMap{
+  position: relative; width: 1300px; height: 600px;
+}
+
 /*-------------------------------------------*/
 /*-----------End State Page Styles-----------*/
 /*-------------------------------------------*/
