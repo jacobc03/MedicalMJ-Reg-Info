@@ -1,17 +1,30 @@
 <navbar></navbar>
 
-<img class="legalStatePic" src="https://infographic.statista.com/normal/chartoftheday_6681_the_states_where_it_s_legal_to_smoke_marijuana_n.jpg">
+<!--/////////-->
+<!--Section 1-->
+<!--/////////-->
 
-<div>
-	<p class="stateSummary">Below is a list of states where Medical Marijuana is legal. If you can't find your home state below, feel free to <a ui-sref="politicians">contact</a> your local politicians to let them know of your support for Medical Marijuana.</p>
+<div class="container">
+	<div class="row">
+		<div class="form-group col-md-10 col-md-offset-1" id="marijuanaMap" style="position: relative; width: 1300px; height: 600px;">
+		</div>
+	</div>
+		<p class="stateSummary">Below is a list of states where Medical Marijuana is legal. If you can't find your home state below, feel free to <a ui-sref="politicians">contact</a> your local politicians to let them know of your support for Medical Marijuana.</p>
 </div>
+
+<!--/////////////-->
+<!--Section 1 End-->
+<!--/////////////-->
+
+<!--/////////-->
+<!--Section 2-->
+<!--/////////-->
 
 <div class="container">
 	<div class="row">
 		<div class="form-group col-md-4 col-md-offset-4">
 		<label for="state" class="control-label">View a State</label>
 
-	
 		<select class="form-control" id="state" name="state" ng-model="StateVM.state.state" ng-change='StateVM.selectState()'>
 			<option value="">N/A</option>
 			<option value="AK">Alaska</option>
@@ -49,9 +62,16 @@
 	</div>
 </div>
 
+<!--/////////////-->
+<!--Section 2 End-->
+<!--/////////////-->
+
+<!--/////////-->
+<!--Section 3-->
+<!--/////////-->
+
 <div class="container">
 	<div class="jumbotron" ng-show="StateVM.state.state" ng-repeat="info in StateVM.stateRegInfo">
-    
 		<div class="registration"><img class="statePic" ng-src="{{info.picture}}">
 			<h4>Registration Info</h4>
 
@@ -93,3 +113,7 @@
 		</div>	 
 	</div>
 </div>
+
+<!--/////////////-->
+<!--Section 3 End-->
+<!--/////////////-->
