@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background-color: #73B955;
 }
 .container{
   padding: 0;
@@ -75,6 +75,20 @@ body{
 }
 .homeFacts{
   text-align: center;
+}
+.videoCarousel{
+  background-color: #559F3C;
+}
+.newsImage{
+  width: 200px;
+  height: 150px;
+}
+.newsSection{
+  overflow: scroll;
+  height: 500px;
+}
+.newsJumbo{
+  background-color: #73B955;
 }
 /*------------------------------------------*/
 /*-----------End Home Page Styles-----------*/

@@ -82,20 +82,41 @@ app.post("/searchRep",function(req, res){
   })
 })
 
+//Guardian API
+app.post("/searchNews",function(req, res){
+//  console.log(req.body.state);
+  var newsAPI = {
+  url: "https://content.guardianapis.com/search?q=marijuana&api-key=02d998fe-5241-46ca-b7b0-6b7f2ebd0c98"
+};
+  request(newsAPI, function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+     var newsResult = JSON.parse(body);
+   // console.log(politicianSearchResult);
+    res.json(newsResult);
 
-//Politicians API. Had to make api call here due to Access-Control-Allow-Origin error caused by Angular
-// var politiciansAPI = {
-//   url: 'https://api.propublica.org/congress/v1/115/house/members.json',
-//   headers: {
-//     'X-API-Key': '2PvUNGIQHTaDhSCa3E5WD1klEX67ajkM5eLGkgkO'
-//   }
-// };
-// request(politiciansAPI, function (error, response, body) {
-//   if (!error && response.statusCode == 200) {
-//   //  console.log(body);
-//   }
-// })
+    }
+  })
+})
 
+//NY Times API
+app.get("/searchNYT",function(req, res){
+//  console.log(req.body.state);
+  var nyAPI = {
+  url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
+  qs: {
+    'api-key': "89aa4e65f6644431a4fae8a763464a38",
+    'q': "marijuana"
+  }
+};
+  request(nyAPI, function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+     var nyResult = JSON.parse(body);
+   // console.log(politicianSearchResult);
+    res.json(nyResult);
+
+    }
+  })
+})
 
 
 // Listen on port 3000
