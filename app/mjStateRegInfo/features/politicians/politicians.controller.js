@@ -12,12 +12,12 @@ function PoliticiansCtrl($http) {
     //Senators
     vm.searchSenators = function() {
 
-        $http.post('/searchSenators', { state: vm.politicianInfo.state })
-            .then(function(data) {
-                console.log(data)
-                vm.senInfo = data.data.results
-            })
-    }
+            $http.post('/searchSenators', { state: vm.politicianInfo.state })
+                .then(function(data) {
+                    console.log(data)
+                    vm.senInfo = data.data.results
+                })
+        }
     //Representatives
     vm.searchRep = function() {
 

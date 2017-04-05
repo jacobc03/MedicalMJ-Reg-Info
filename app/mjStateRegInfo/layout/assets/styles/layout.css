@@ -1,32 +1,50 @@
-body{
-  background-color: #73B955;
+body {
+    background-color: #73B955;
 }
-.container{
-  padding: 0;
+
+.container {
+    padding: 0;
 }
+
+
 /*-----------------------------------*/
+
+
 /*-----------Navbar Styles-----------*/
+
+
 /*-----------------------------------*/
+
+
 /* Style for Navbar brand image */
+
 .navbar-brand>img {
-   max-height: 200%;
-   height: 200%;
-   width: auto;
-   margin-top: -9px
+    max-height: 200%;
+    height: 200%;
+    width: auto;
+    margin-top: -9px
 }
+
+
 /* Navbar color*/
-.navbar{
-	background-color: green;
-  margin: 0;
+
+.navbar {
+    background-color: green;
+    margin: 0;
 }
+
+
 /* Style for Navbar links*/
-.navbar-default .navbar-nav>li>a{
-	 color: white;
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
 }
-.navbar-default .navbar-text{
+
+.navbar-default .navbar-text {
     color: white;
     font-size: 30px;
 }
+
 .navbar-text {
     position: absolute;
     width: 100%;
@@ -35,72 +53,114 @@ body{
     margin: auto;
     padding-top: 10px;
 }
+
+
 /*---------------------------------------*/
+
+
 /*-----------End Navbar Styles-----------*/
+
+
 /*---------------------------------------*/
 
 
 /*--------------------------------------*/
+
+
 /*-----------Home Page Styles-----------*/
+
+
 /*--------------------------------------*/
-.carousel-inner{
-  display: block;
+
+.carousel-inner {
+    display: block;
     margin: auto;
     width: 40%;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
-.videoTestimonials{
-  text-align: center;
+
+.videoTestimonials {
+    text-align: center;
 }
-.homeTitle{
-  text-align: center;
+
+.homeTitle {
+    text-align: center;
 }
+
+
 /* Makes Picture carousel fill entire container */
-.pic,.carousel,.item,.container,.fill {
-  height:100%;
-  width:100%;
-  background-position:center center;
+
+.pic,
+.carousel,
+.item,
+.container,
+.fill {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
 }
-.homePic{
- height: 520px !important;
+
+.homePic {
+    height: 520px !important;
 }
+
+
 /* Center quotes in the middle of the carousel vertically and horizontally */
-.carousel-caption.homePageQuotes{
-    margin: 0; 
+
+.carousel-caption.homePageQuotes {
+    margin: 0;
     position: absolute;
     top: 45%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
-.homeFacts{
-  text-align: center;
+
+.homeFacts {
+    text-align: center;
 }
-.videoCarousel{
-  background-color: #559F3C;
+
+.videoCarousel {
+    background-color: #559F3C;
 }
-.newsImage{
-  width: 200px;
-  height: 150px;
+
+.newsImage {
+    width: 200px;
+    height: 150px;
 }
-.newsSection{
-  overflow: scroll;
-  height: 520px;
+
+.newsSection {
+    overflow: scroll;
+    height: 520px;
 }
-.newsJumbo{
-  background-color: #73B955;
+
+.newsJumbo {
+    background-color: #73B955;
 }
+
+
 /*------------------------------------------*/
+
+
 /*-----------End Home Page Styles-----------*/
+
+
 /*------------------------------------------*/
 
 
 /*---------------------------------------*/
+
+
 /*-----------State Page Styles-----------*/
+
+
 /*---------------------------------------*/
+
+
 /* Style each state picture */
-.statePic{
-  height: 150px;
+
+.statePic {
+    height: 150px;
     width: 250px;
     border: 5px;
     border-style: solid;
@@ -108,97 +168,140 @@ body{
     padding: 3px;
     text-align: center;
 }
+
+
 /* Style for contact info div of each state */
-.contact{
-  text-align: center;
+
+.contact {
+    text-align: center;
 }
+
+
 /* Style for registration info div of each state */
-.registration{
-  text-align: center;
+
+.registration {
+    text-align: center;
 }
+
+
 /* Style for possession info div of each state */
-.possession{
-  text-align: center; 
+
+.possession {
+    text-align: center;
 }
+
+
 /* Style for state provided info div of each state */
-.moreInfo{
-  text-align: center;  
+
+.moreInfo {
+    text-align: center;
 }
+
+
 /* Style for main pic on the state page */
-.legalStatePic{
-  display: block;
+
+.legalStatePic {
+    display: block;
     margin: auto;
     width: 40%;
     margin-bottom: 15px;
 }
+
+
 /* Style for the intro info on the state page */
-.stateSummary{
-  text-align: center;
-}
-#marijuanaMap{
-  position: relative; width: 1300px; height: 600px;
+
+.stateSummary {
+    text-align: center;
 }
 
+#marijuanaMap {
+    position: relative;
+    width: 1300px;
+    height: 600px;
+}
+
+
 /*-------------------------------------------*/
+
+
 /*-----------End State Page Styles-----------*/
+
+
 /*-------------------------------------------*/
 
 
 /*-----------------------------------------*/
+
+
 /*-----------Strains Page Styles-----------*/
+
+
 /*-----------------------------------------*/
-.strainPic{
-  height: 230px;
+
+.strainPic {
+    height: 230px;
     width: 300px;
     border: 5px;
     border-style: solid;
     border-color: green;
     padding: 3px;
 }
-.strainSearchBar{
-  margin-bottom: 10px;
+
+.strainSearchBar {
+    margin-bottom: 10px;
 }
+
 .strainListPic {
-  max-width: 100%;
-  margin-top: 50px;
-  padding: 20px;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+    max-width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
+
 .strainListPic:hover {
-  -moz-transform: scale(2.3);
-  -webkit-transform: scale(2.3);
-  transform: scale(2.3);
+    -moz-transform: scale(2.3);
+    -webkit-transform: scale(2.3);
+    transform: scale(2.3);
 }
-.photoCaption{text-align: center;}
+
+.photoCaption {
+    text-align: center;
+}
+
 
 /*---------------------------------------------*/
+
+
 /*-----------End Strains Page Styles-----------*/
+
+
 /*---------------------------------------------*/
 
 
 /*---------------------------------------------*/
+
+
 /*-----------Politicians Page Styles-----------*/
+
+
 /*---------------------------------------------*/
-.socialPic{
-  width: 50px;
-  height: 50px;
+
+.socialPic {
+    width: 50px;
+    height: 50px;
 }
-.pollCharts{text-align: center;}
+
+.pollCharts {
+    text-align: center;
+}
+
+
 /*-------------------------------------------------*/
+
+
 /*-----------End Politicians Page Styles-----------*/
+
+
 /*-------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-

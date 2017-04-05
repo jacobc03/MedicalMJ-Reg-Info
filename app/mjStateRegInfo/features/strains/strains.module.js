@@ -1,5 +1,5 @@
 angular
-	.module('mjStateRegInfo.strains',[
-			'mjStateRegInfo.component.navbar',
-			'mjStateRegInfo.component.periodicTable'
-		]);
+    .module('mjStateRegInfo.strains', [
+        'mjStateRegInfo.component.navbar',
+        'mjStateRegInfo.component.periodicTable'
+    ]);

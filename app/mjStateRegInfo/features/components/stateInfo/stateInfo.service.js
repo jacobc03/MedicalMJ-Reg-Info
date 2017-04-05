@@ -1,18 +1,18 @@
 //StateInfo front end service 
 
 angular
-	.module('mjStateRegInfo.component.stateInfo')
-	.service('stateInfo', StateInfoService);
+    .module('mjStateRegInfo.component.stateInfo')
+    .service('stateInfo', StateInfoService);
 
 function StateInfoService($http) {
     return {
         // getting all the info from the router
-        getStateInfo: function (stateInfo) {
+        getStateInfo: function(stateInfo) {
             $http.get('/api')
-                .then(function (response) {
+                .then(function(response) {
                     response.data.forEach(function(info) {
                         stateInfo.push(info);
-                        
+
                     });
                 });
         },

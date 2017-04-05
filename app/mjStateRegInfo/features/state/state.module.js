@@ -1,5 +1,5 @@
 angular
-	.module('mjStateRegInfo.state',[
-			'mjStateRegInfo.component.navbar',
-			"mjStateRegInfo.component.stateInfo"
-		]);
+    .module('mjStateRegInfo.state', [
+        'mjStateRegInfo.component.navbar',
+        "mjStateRegInfo.component.stateInfo"
+    ]);

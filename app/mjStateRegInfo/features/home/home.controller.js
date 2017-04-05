@@ -10,8 +10,8 @@ function HomeCtrl($http) {
     }
 
     vm.nyArticles = {
-        articles: ''
-    }
+            articles: ''
+        }
     //The Guardian
     vm.searchNews = function() {
 

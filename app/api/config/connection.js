@@ -13,12 +13,12 @@ mongoose.connect("mongodb://heroku_9rscmq61:lhalp428lsr78cfl9bfb6puk09@ds141450.
 var db = mongoose.connection;
 
 // check for any error
-db.on("error", function (error) {
+db.on("error", function(error) {
     console.log("database error: ", err);
 });
 
 // confirm connection
-db.once("open", function () {
+db.once("open", function() {
     console.log("mongoose db connected");
 });
 

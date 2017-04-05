@@ -1,6 +1,6 @@
 angular
-	.module('mjStateRegInfo.home',[
-			'mjStateRegInfo.component.navbar',
-			"chart.js"
-			
-		]);
+    .module('mjStateRegInfo.home', [
+        'mjStateRegInfo.component.navbar',
+        "chart.js"
+
+    ]);
