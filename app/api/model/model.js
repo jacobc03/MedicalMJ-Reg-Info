@@ -11,7 +11,9 @@ var Schema = mongoose.Schema;
 
 // Create States schema
 var StatesSchema = new Schema({
-  
+  	state:{
+  		type:String
+  	}
 });
 
 // Create the States model with the StatesSchema

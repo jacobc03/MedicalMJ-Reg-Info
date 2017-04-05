@@ -7,17 +7,19 @@ angular
 		vm.stateRegInfo= [];
 
 		vm.state = {
-			
+			state:''
 		}
+		vm.currentState;
 
 		vm.selectState = function(){
-		
-			console.log(vm.state);
-			
-			// $http.get('', something)
-			// .then(function(res){
-			// 	console.log('Successful: '+ res
-			// })
+			for (var i = 0; i < vm.stateRegInfo.length; i++) {
+				//console.log(vm.stateRegInfo[i].state)
+				if (vm.state.state ==vm.stateRegInfo[i].state) {
+				
+					vm.currentState=vm.stateRegInfo[i];
+					console.log(vm.currentState);
+				}
+			}
 
 		}
 		

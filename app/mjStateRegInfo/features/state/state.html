@@ -1,78 +1,98 @@
 <navbar></navbar>
-
 <!--/////////-->
 <!--Section 1-->
 <!--/////////-->
-
 <div class="container">
-	<div class="row">
-		<div  id="marijuanaMap" >
-		</div>
-	</div>
-		<p class="stateSummary">Below is a list of states where Medical Marijuana is legal. If you can't find your home state below, feel free to <a ui-sref="politicians">contact</a> your local politicians to let them know of your support for Medical Marijuana.</p>
+    <div class="row">
+        <div id="marijuanaMap">
+        </div>
+    </div>
+    <p class="stateSummary">Below is a list of states where Medical Marijuana is legal. If you can't find your home state below, feel free to <a ui-sref="politicians">contact</a> your local politicians to let them know of your support for Medical Marijuana.</p>
 </div>
-
 <!--/////////////-->
 <!--Section 1 End-->
 <!--/////////////-->
-
 <!--/////////-->
 <!--Section 2-->
 <!--/////////-->
-
 <div class="container">
-	<div class="row">
-		<div class="form-group col-md-4 col-md-offset-4">
-		<label for="state" class="control-label">View a State</label>
-
-		<select class="form-control" id="state" name="state" ng-model="StateVM.state.state" ng-change='StateVM.selectState()'>
-			<option value="">N/A</option>
-			<option value="AK">Alaska</option>
-			<option value="AR">Arkansas</option>
-			<option value="AZ">Arizona</option>
-			<option value="CA">California</option>
-			<option value="CO">Colorado</option>
-			<option value="CT">Connecticut</option>
-			<option value="DC">District of Columbia</option>
-			<option value="DE">Delaware</option>
-			<option value="FL">Florida</option>
-			<option value="HI">Hawaii</option>
-			<option value="IL">Illinois</option>
-			<option value="MA">Massachusetts</option>
-			<option value="MD">Maryland</option>
-			<option value="ME">Maine</option>
-			<option value="MI">Michigan</option>
-			<option value="MN">Minnesota</option>
-			<option value="MT">Montana</option>
-			<option value="ND">North Dakota</option>
-			<option value="NH">New Hampshire</option>
-			<option value="NJ">New Jersey</option>
-			<option value="NM">New Mexico</option>
-			<option value="NV">Nevada</option>
-			<option value="NY">New York</option>
-			<option value="OH">Ohio</option>
-			<option value="OR">Oregon</option>
-			<option value="PA">Pennsylvania</option>
-			<option value="RI">Rhode Island</option>
-			<option value="VT">Vermont</option>
-			<option value="WA">Washington</option>
-		</select>
-	
-		</div>
-	</div>
+    <div class="row">
+        <div class="form-group col-md-4 col-md-offset-4">
+            <label for="state" class="control-label">View a State</label>
+            <select class="form-control" id="state" name="state" ng-model="StateVM.state.state" ng-change='StateVM.selectState()'>
+                <option value="">N/A</option>
+                <option value="AK">Alaska</option>
+                <option value="AR">Arkansas</option>
+                <option value="AZ">Arizona</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DC">District of Columbia</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="HI">Hawaii</option>
+                <option value="IL">Illinois</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MD">Maryland</option>
+                <option value="ME">Maine</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MT">Montana</option>
+                <option value="ND">North Dakota</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NV">Nevada</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+            </select>
+        </div>
+    </div>
 </div>
-
 <!--/////////////-->
 <!--Section 2 End-->
 <!--/////////////-->
-
 <!--/////////-->
 <!--Section 3-->
 <!--/////////-->
-
 <div class="container">
+    <div class="jumbotron" ng-show="StateVM.state.state">
+        <div class="registration"><img class="statePic img-rounded" ng-src="{{StateVM.currentState.picture}}">
+            <h4>Registration Info</h4>
+            <span><strong>Approved Conditions: </strong>{{StateVM.currentState.conditions}}</span>
+            <br>
+            <span><strong>Registration: </strong> {{StateVM.currentState.registration}}</span>
+            <br>
+            <span><strong>Patient Registry Fee: </strong> {{StateVM.currentState.fee}}</span>
+            <br>
+            <span><strong>Accepts other states' registry ID cards:</strong> {{StateVM.currentState.cards}}</span>
+        </div>
+        <div class="possession">
+            <h4>Possession/Cultivation</h4>
+            <span>{{StateVM.currentState.possession}}</span>
+        </div>
+        <div class="moreInfo">
+            <h4>Information Provided by the State on Sources for Medical Marijuana</h4>
+            <span>{{StateVM.currentState.info}}</span>
+        </div>
+        <div class="contact">
+            <h4>Contact Info</h4>
+            <span><strong>Website: </strong> <a href="{{StateVM.currentState.website}}" target="_blank">State Website</a></span>
+            <br>
+            <span><strong>Email: </strong><a href="mailto:{{StateVM.currentState.email}}"> {{StateVM.currentState.email}}</a></span>
+            <br>
+            <span><strong>Phone Number: </strong> {{StateVM.currentState.phone}}</span>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
 	<div class="jumbotron" ng-show="StateVM.state.state" ng-repeat="info in StateVM.stateRegInfo">
-		<div class="registration"><img class="statePic" ng-src="{{info.picture}}">
+		<div class="registration"><img class="statePic img-rounded" ng-src="{{info.picture}}">
 			<h4>Registration Info</h4>
 
 			<span><strong>Approved Conditions: </strong>{{info.conditions}}</span>
@@ -112,8 +132,7 @@
 		
 		</div>	 
 	</div>
-</div>
-
+</div> -->
 <!--/////////////-->
 <!--Section 3 End-->
 <!--/////////////-->
